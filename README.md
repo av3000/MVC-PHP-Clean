@@ -73,7 +73,7 @@ class YourController extends Controller {
 
 //?>
 
-<h6> After model is created you can use it for example, in your index page. </h6>
+<h6> After model is created you can use it in your page. </h6>
 
 //<?php
 
@@ -85,7 +85,7 @@ class YourController extends Controller {
 
   }
   
-  public function index(){
+  public function yourpage(){
 
   $YourData = $this->YourNewModel->getData();
   
@@ -96,10 +96,39 @@ class YourController extends Controller {
     'newData' => $YourData 
   ];
   
-  $this->view('', $data);
+  $this->view('YourController/yourpage', $data);
   
   }
   
 }
 
 //?>
+
+<h4> Step-3: Use data in your page </h4>
+
+<h6> We need to go one folder up into views folder </h6>
+"cd .." <br/>
+"cd views" <br/>
+
+<h6>Inside of views folder I suggest to create seperate folder </h6>
+"mkdir YourPages" <br/>
+"cd YourPages" <br/>
+"touch yourpage.php" <br/>
+
+<h6>Inside of yourpage we can use to show data from the "YourController.php" </h6>
+
+// <?php
+
+echo $data['title']; 
+
+echo $data['newData'];
+
+//?> 
+
+// ?>
+
+
+
+<h2> Will be updated. </h2>
+<h2> Last update 2019-05-18. </h2>
+
