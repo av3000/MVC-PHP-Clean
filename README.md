@@ -12,9 +12,11 @@ Line 3 - 6 Change your database settings Line 11 Change your root url path.
 
 You can find all used libraries in ->app->libraries directory.
 
-<h3> Create a model </h3>
+<h3> Use database </h3>
 
-<h4> Create models folder:  </h4>
+<h4> Step-1: Create a model </h4>
+
+Create models folder:  <br/>
 "cd MVC-PHP-Clean/app" <br/>
 "mkdir models" <br/>
 "cd models" <br/> 
@@ -22,7 +24,7 @@ You can find all used libraries in ->app->libraries directory.
 "./YourModel.php" <br/>
 <br/>
 
-<?php
+//<?php
 
 class YourModel {
 
@@ -36,6 +38,6 @@ class YourModel {
 
 }
 
-?>
+//?>
 
 
