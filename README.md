@@ -57,7 +57,7 @@ use existing one
 or create your own controller
 "touch YourController.php" <br/>
 
-Inside of controller add:
+<h6> Inside of controller add: </h6>
 
 //<?php
 
@@ -73,7 +73,7 @@ class YourController extends Controller {
 
 //?>
 
-After model is created you can use it for example, in your index page.
+<h6> After model is created you can use it for example, in your index page. </h6>
 
 //<?php
 
