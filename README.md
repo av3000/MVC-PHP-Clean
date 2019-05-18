@@ -35,9 +35,71 @@ class YourModel {
     $this->db = new Database;
   
   }
+  
+  public function getData(){
+
+  $this->db->query("SELECT * FROM YourTable");
+  
+  return $this->db->resultSet();
+
+  }
 
 }
 
 //?>
 
+<h4> Step-2: Use model in a controller </h4>
 
+"cd .." <br/>
+"cd controllers" <br/>
+use existing one 
+"./Pages.php" <br/>
+or create your own controller
+"touch YourController.php" <br/>
+
+Inside of controller add:
+
+//<?php
+
+class YourController extends Controller {
+
+  public function contructor(){
+  
+    $this->YourNewModel = $this->model('YourModelFromModelsFolder');
+
+  }
+  
+}
+
+//?>
+
+After model is created you can use it for example, in your index page.
+
+//<?php
+
+class YourController extends Controller {
+
+  public function contructor(){
+  
+    $this->YourNewModel = $this->model('YourModelFromModelsFolder');
+
+  }
+  
+  public function index(){
+
+  $YourData = $this->YourNewModel->getData();
+  
+  $data = [ 
+  
+    'title' => 'Welcome',
+    
+    'newData' => $YourData 
+  ];
+  
+  $this->view('', $data);
+  
+  }
+  
+}
+
+//?>
